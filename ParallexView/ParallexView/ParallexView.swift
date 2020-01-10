@@ -91,7 +91,11 @@ open class ImageDownloader{
     private static func getImageFromURL() -> [String: UIImage]?{
         //load
         if let data = UserDefaults.standard.object(forKey: "cachedImages") as? NSData{
-            return try? (NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data as Data) as? [String: UIImage]) ?? nil
+            do {
+                return try? (NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data as Data) as? [String: UIImage]) ?? nil
+            } catch{
+                return nil
+            }
         }
         return nil
     }
