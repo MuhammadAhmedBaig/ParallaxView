@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SliderView" customModule="Parallex" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="ATg-sC-5ds" id="dTc-rz-kWn"/>
+                <outlet property="pageControl" destination="9Xh-Qq-lTs" id="tBU-vA-EYq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATg-sC-5ds">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                </imageView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Xh-Qq-lTs">
+                    <rect key="frame" x="171.5" y="153" width="71" height="37"/>
+                    <color key="currentPageIndicatorTintColor" red="0.18823529410000001" green="0.8862745098" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="9Xh-Qq-lTs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1Cf-ei-QOl"/>
+                <constraint firstAttribute="bottom" secondItem="ATg-sC-5ds" secondAttribute="bottom" id="2oQ-rJ-mjz"/>
+                <constraint firstItem="ATg-sC-5ds" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3jH-zZ-FoH"/>
+                <constraint firstItem="ATg-sC-5ds" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QH8-sY-Ggr"/>
+                <constraint firstAttribute="bottom" secondItem="9Xh-Qq-lTs" secondAttribute="bottom" constant="10" id="gov-hZ-lbJ"/>
+                <constraint firstAttribute="trailing" secondItem="ATg-sC-5ds" secondAttribute="trailing" id="mgk-Vn-bqL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="272.87946428571428"/>
+        </view>
+    </objects>
+</document>
