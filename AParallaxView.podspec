@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "ParallexView"
+  spec.name         = "AParallaxView"
   spec.version      = "1.1.0"
   spec.summary      = "A Simple ParallexView, which is cool."
 
@@ -90,7 +90,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "ParallexView/ParallexView/**/*.swift"
+  spec.source_files  = "ParallexView/ParallexView/**/*.swift", "ParallexView/ParallexView/**/*.xib"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
