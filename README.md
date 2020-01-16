@@ -1,7 +1,7 @@
-# ParallaxView
+# AParallaxView
 A Library which helps to integrate Parallax effect like Android in iOS Swift. 
 
 To Install Pod
 run:
 
-pod 'ParallexView'
+pod 'AParallaxView'
