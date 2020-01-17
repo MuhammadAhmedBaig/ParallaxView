@@ -9,27 +9,62 @@
 import UIKit
 
 public struct ParallexNavBarItem{
-    var image : UIImage
-    var action: (() -> Void)?
+    public var image : UIImage
+    public var action: (() -> Void)?
+    
+    public init(image: UIImage, action: (() -> Void)?) {
+        self.image = image
+        self.action = action
+    }
 }
 
 public struct ParallexNavConfig{
-    var leftBarItem : ParallexNavBarItem
-    var rightBarItem : ParallexNavBarItem
-    var title: String
-    var itemsColor: UIColor
-    var barColor: UIColor
-    var titleFont: UIFont = UIFont.boldSystemFont(ofSize: 17.0)
+    public var leftBarItem : ParallexNavBarItem
+    public var rightBarItem : ParallexNavBarItem
+    public var title: String
+    public var itemsColor: UIColor
+    public var barColor: UIColor
+    public var titleFont: UIFont = UIFont.boldSystemFont(ofSize: 17.0)
+    
+    public init(leftBarItem: ParallexNavBarItem,
+                rightBarItem: ParallexNavBarItem,
+                title: String,
+                itemsColor: UIColor,
+                barColor: UIColor,
+                titleFont: UIFont = UIFont.boldSystemFont(ofSize: 17.0)){
+        self.leftBarItem = leftBarItem
+        self.rightBarItem = rightBarItem
+        self.title = title
+        self.itemsColor = itemsColor
+        self.barColor = barColor
+        self.titleFont = titleFont
+    }
 }
 
 public struct ParallexConfiguration{
-    var navConfig: ParallexNavConfig
-    var viewController: UIViewController
-    var parallexTVDelegate: ParallexTableViewDelegate
-    var parallexTVDataSource: ParallexTableViewDataSource
-    var headerSlider: [ImageCellData]
-    var pagerSelectedColor: UIColor
-    var pagerUnSelectedColor: UIColor
+    public var navConfig: ParallexNavConfig
+    public var viewController: UIViewController
+    public var parallexTVDelegate: ParallexTableViewDelegate
+    public var parallexTVDataSource: ParallexTableViewDataSource
+    public var headerSlider: [ImageCellData]
+    public var pagerSelectedColor: UIColor
+    public var pagerUnSelectedColor: UIColor
+    
+    public init (navConfig: ParallexNavConfig,
+                 viewController: UIViewController,
+                 parallexTVDelegate: ParallexTableViewDelegate,
+                 parallexTVDataSource: ParallexTableViewDataSource,
+                 headerSlider: [ImageCellData],
+                 pagerSelectedColor: UIColor,
+                 pagerUnSelectedColor: UIColor){
+        self.navConfig = navConfig
+        self.viewController = viewController
+        self.parallexTVDelegate = parallexTVDelegate
+        self.parallexTVDataSource = parallexTVDataSource
+        self.headerSlider = headerSlider
+        self.pagerSelectedColor = pagerSelectedColor
+        self.pagerUnSelectedColor = pagerUnSelectedColor
+    }
 }
 
 @objc public protocol ParallexTableViewDataSource: class{

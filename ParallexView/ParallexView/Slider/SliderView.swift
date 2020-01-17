@@ -8,11 +8,11 @@
 
 import UIKit
 
-struct ImageCellData{
-    var imageURL: URL?
-    var imageInstance: UIImage?
+public struct ImageCellData{
+    public var imageURL: URL?
+    public var imageInstance: UIImage?
     
-    init(imageURL: URL?, imageInstance: UIImage?) {
+    public init(imageURL: URL?, imageInstance: UIImage?) {
         if imageURL == nil && imageInstance == nil{
             fatalError("Both Image URL and image are not able to become nil at same time.")
         }
